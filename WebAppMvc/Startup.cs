@@ -11,6 +11,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using WebAppMvc.Data;
+using WebAppMvc.Services;
+using WebAppMvc.Models;
 
 namespace WebAppMvc
 {
@@ -41,6 +43,8 @@ namespace WebAppMvc
                 builder.MigrationsAssembly("WebAppMvc")));
 
             services.AddScoped<SeedingService>();
+
+            services.AddScoped<SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

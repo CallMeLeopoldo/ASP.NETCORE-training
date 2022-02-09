@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using WebAppMvc.Models;
 
-namespace WebAppMvc.Data
+namespace WebAppMvc.Models
 {
     public class WebAppMvcContext : DbContext
     {
