@@ -35,11 +35,11 @@ namespace WebAppMvc.Data
             Seller s2 = new Seller(2, "Mark Brown", "mark@gmail.com", 1160.0, new DateTime(1997, 6, 3), d2);
             Seller s3 = new Seller(3, "Abby Brown", "abby@gmail.com", 1200.0, new DateTime(1992, 11, 26), d3);
 
-            SalesRecord sr1 = new SalesRecord(1, new DateTime(2018, 09, 23), 2000.0, SaleStatus.BILLED);
-            SalesRecord sr2 = new SalesRecord(2, new DateTime(2018, 05, 11), 2000.0, SaleStatus.BILLED);
-            SalesRecord sr3 = new SalesRecord(3, new DateTime(2018, 12, 8), 2000.0, SaleStatus.BILLED);
-            SalesRecord sr4 = new SalesRecord(4, new DateTime(2018, 12, 28), 2000.0, SaleStatus.BILLED);
-            SalesRecord sr5 = new SalesRecord(5, new DateTime(2018, 07, 10), 2000.0, SaleStatus.BILLED);
+            SalesRecord sr1 = new SalesRecord(1, new DateTime(2018, 09, 23), 2000.0, SaleStatus.BILLED, s1);
+            SalesRecord sr2 = new SalesRecord(2, new DateTime(2018, 05, 11), 2000.0, SaleStatus.BILLED, s2);
+            SalesRecord sr3 = new SalesRecord(3, new DateTime(2018, 12, 8), 2000.0, SaleStatus.BILLED, s1);
+            SalesRecord sr4 = new SalesRecord(4, new DateTime(2018, 12, 28), 2000.0, SaleStatus.BILLED, s3);
+            SalesRecord sr5 = new SalesRecord(5, new DateTime(2018, 07, 10), 2000.0, SaleStatus.BILLED, s3);
 
             _context.Department.AddRange(d1, d2, d3, d4);
 

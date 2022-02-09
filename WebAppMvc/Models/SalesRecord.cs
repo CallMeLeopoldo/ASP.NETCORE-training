@@ -14,12 +14,13 @@ namespace WebAppMvc.Models
 
         public SalesRecord() { }
 
-        public SalesRecord(int id, DateTime date, double ammount, SaleStatus status)
+        public SalesRecord(int id, DateTime date, double ammount, SaleStatus status, Seller seller)
         {
             Id = id;
             Date = date;
             Ammount = ammount;
             Status = status;
+            Seller = seller;
         }
     }
 }

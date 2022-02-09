@@ -28,9 +28,18 @@ namespace WebAppMvc.Services
 
         public async Task RemoveAsync(int id)
         {
-            var obj = _context.Seller.Find(id);
-            _context.Seller.Remove(obj);
-            await _context.SaveChangesAsync();
+            try
+            {
+                var obj = _context.Seller.Find(id);
+                _context.Seller.Remove(obj);
+                await _context.SaveChangesAsync();
+            }
+
+            catch (DbUpdateException e)
+            {
+                throw new IntegrityException(e.Message);
+            }
+
         }
 
         public async Task InsertAsync(Seller obj)
@@ -52,7 +61,7 @@ namespace WebAppMvc.Services
                 await _context.SaveChangesAsync();
             }
 
-            catch(DbUpdateConcurrencyException e)
+            catch(DbUpdateException e)
             {
                 throw new DbConcurrencyException(e.Message);
             }
