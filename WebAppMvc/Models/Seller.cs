@@ -13,18 +13,20 @@ namespace WebAppMvc.Models
         public double Salary { get; set; }
         public DateTime BirthDate { get; set; }
         public Department Department { get; set; }
+        public int DepartmentId { get; set; }
 
         public ICollection<SalesRecord> Sales = new List<SalesRecord>();
 
         public Seller() { }
 
-        public Seller(int id, string name, string email, double salary, DateTime date)
+        public Seller(int id, string name, string email, double salary, DateTime date, Department dep)
         {
             Id = id;
             Name = name;
             Email = email;
             Salary = salary;
             BirthDate = date;
+            Department = dep;
         }
 
         public void AddSale(SalesRecord sr)

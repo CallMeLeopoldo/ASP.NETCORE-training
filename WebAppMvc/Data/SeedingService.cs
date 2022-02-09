@@ -31,9 +31,9 @@ namespace WebAppMvc.Data
             Department d3 = new Department(3, "Fashion");
             Department d4 = new Department(4, "Books");
 
-            Seller s1 = new Seller(1, "Bobby Brown", "bob@gmail.com", 1000.0, new DateTime(1998, 4, 21));
-            Seller s2 = new Seller(2, "Mark Brown", "mark@gmail.com", 1160.0, new DateTime(1997, 6, 3));
-            Seller s3 = new Seller(3, "Abby Brown", "abby@gmail.com", 1200.0, new DateTime(1992, 11, 26));
+            Seller s1 = new Seller(1, "Bobby Brown", "bob@gmail.com", 1000.0, new DateTime(1998, 4, 21), d1);
+            Seller s2 = new Seller(2, "Mark Brown", "mark@gmail.com", 1160.0, new DateTime(1997, 6, 3), d2);
+            Seller s3 = new Seller(3, "Abby Brown", "abby@gmail.com", 1200.0, new DateTime(1992, 11, 26), d3);
 
             SalesRecord sr1 = new SalesRecord(1, new DateTime(2018, 09, 23), 2000.0, SaleStatus.BILLED);
             SalesRecord sr2 = new SalesRecord(2, new DateTime(2018, 05, 11), 2000.0, SaleStatus.BILLED);
